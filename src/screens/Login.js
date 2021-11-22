@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, TextInput, StyleSheet, Button, Text} from 'react-native';
-import useInput from '../useHook/useInput';
 
 const Login = () => {
-  const {email, setEmail} = useInput('');
-  const {password, setPassword} = useInput('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>

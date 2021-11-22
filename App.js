@@ -8,7 +8,7 @@ import Footer from './src/components/Footer';
 import Home from './src/screens/Home';
 import Login from './src/screens/Login';
 import Profile from './src/screens/Profile';
-import {Search} from './src/components/Search';
+import {Search} from './src/screens/Search';
 import List from './src/components/List/List';
 
 const Stack = createNativeStackNavigator();
