@@ -1,58 +1,8 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Button,
-  TextInput,
-  StyleSheet,
-  FlatList,
-  Text,
-} from 'react-native';
-
-const Item = ({item}) => {
-  const {text} = item;
-  return (
-    <View>
-      <Text>{text}</Text>
-    </View>
-  );
-};
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
 
 const Home = () => {
-  const [val, setVal] = useState('');
-  const [todo, setTodo] = useState([]);
-
-  const addTodo = () => {
-    if (val) {
-      setTodo([...todo, {id: Date.now(), text: val}]);
-      setVal('');
-    }
-  };
-  const clearTodo = () => {
-    setTodo([]);
-  };
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.wrap}>
-        <TextInput style={styles.input} onChangeText={setVal} value={val} />
-
-        <Button title="click" color="green" onPress={addTodo} />
-        <Button title="clear" color="#000" onPress={clearTodo} />
-      </View>
-
-      <View>
-        {todo.length ? (
-          <FlatList
-            data={todo}
-            renderItem={Item}
-            keyExtractor={item => item.id.toString()}
-          />
-        ) : (
-          <Text>The list is empty</Text>
-        )}
-      </View>
-    </View>
-  );
+  return <View />;
 };
 
 export default Home;

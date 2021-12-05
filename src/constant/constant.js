@@ -1,7 +1,7 @@
-import home from '../images/home.png';
-import search from '../images/search.png';
-import list from '../images/list.png';
-import user from '../images/user.png';
+import home from '../assets/images/home.png';
+import search from '../assets/images/search.png';
+import list from '../assets/images/list.png';
+import user from '../assets/images/user.png';
 
 const constant = {
   menu: [

@@ -29,7 +29,6 @@ export const Search = () => {
       <View style={styles.btn}>
         <Button title="Search" color="#000" />
       </View>
-
     </View>
   );
 };

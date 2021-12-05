@@ -1,12 +1,8 @@
 import React from 'react';
-import {View, Button, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
 const Category = () => {
-  return (
-    <View>
-      <Button title="Press me" onPress={() => 'Simple Button pressed'} />
-    </View>
-  );
+  return <View />;
 };
 
 export default Category;

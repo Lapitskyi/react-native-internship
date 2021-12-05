@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  View,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-
-} from 'react-native';
+import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import constant from '../assets/constant/constant';
+import constant from '../constant/constant';
 
 const Footer = () => {
   const navigation = useNavigation();

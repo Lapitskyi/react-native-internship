@@ -15,21 +15,22 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <Header />
-        <View style={styles.content}>
-          <Stack.Navigator initialRouteName={'Home'}>
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Search" component={Search} />
-            <Stack.Screen name="List" component={List} />
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Profile" component={Profile} />
-          </Stack.Navigator>
-        </View>
-        <Footer />
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <View style={styles.content}>
+        <Stack.Navigator initialRouteName={'Home'}>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{header: () => <Header />}}
+          />
+          <Stack.Screen name="Search" component={Search} />
+          <Stack.Screen name="List" component={List} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Profile" component={Profile} />
+        </Stack.Navigator>
+      </View>
+      <Footer />
+    </NavigationContainer>
   );
 };
 export default App;
