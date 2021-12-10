@@ -6,7 +6,7 @@ const Header = () => {
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('../assets/images/netflix.png')}
+        source={require('../assets/images/logo-1.png')}
       />
     </View>
   );
@@ -17,11 +17,13 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
-    padding: 20,
-    backgroundColor: '#333',
+    alignItems: 'center',
+    padding: 0,
   },
   logo: {
-    height: 25,
-    width: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 65,
+    width: 200,
   },
 });
