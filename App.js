@@ -1,8 +1,8 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
+import RNBootSplash from 'react-native-bootsplash';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import Home from './src/screens/Home';
@@ -14,6 +14,16 @@ import List from './src/components/List/List';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  useEffect(() => {
+    const init = async () => {
+      // …do multiple sync or async tasks
+    };
+
+    init().finally(async () => {
+      await RNBootSplash.hide({fade: true});
+      console.log('Bootsplash has been hidden successfully');
+    });
+  }, []);
   return (
     <NavigationContainer>
       <View style={styles.content}>
