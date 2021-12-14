@@ -12,7 +12,7 @@ module.exports = {
     allowImportExportEverywhere: true
   },
   plugins: ['jest'],
-  extends: 'airbnb',
+  extends: ['airbnb', 'airbnb/hooks'],
   rules: {
     'react/jsx-filename-extension': 0,
     'arrow-body-style': 0,
