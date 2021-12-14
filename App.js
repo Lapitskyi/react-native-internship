@@ -10,50 +10,52 @@ import Login from './src/screens/Login';
 import Profile from './src/screens/Profile';
 import {Search} from './src/screens/Search';
 import List from './src/components/List/List';
+import Item from './src/components/List/Item';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  useEffect(() => {
-    const init = async () => {
-      // …do multiple sync or async tasks
-    };
+    useEffect(() => {
+        const init = async () => {
+            // …do multiple sync or async tasks
+        };
 
-    init().finally(async () => {
-      await RNBootSplash.hide({fade: true});
-    });
-  }, []);
-  return (
-    <NavigationContainer>
-      <View style={styles.content}>
-        <Stack.Navigator initialRouteName={'Home'}>
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{header: () => <Header />}}
-          />
-          <Stack.Screen name="Search" component={Search} />
-          <Stack.Screen name="List" component={List} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Profile" component={Profile} />
-        </Stack.Navigator>
-      </View>
-      <Footer />
-    </NavigationContainer>
-  );
+        init().finally(async () => {
+            await RNBootSplash.hide({fade: true});
+        });
+    }, []);
+    return (
+        <NavigationContainer>
+            <View style={styles.content}>
+                <Stack.Navigator initialRouteName={'Home'}>
+                    <Stack.Screen
+                        name="Home"
+                        component={Home}
+                        options={{header: () => <Header/>}}
+                    />
+                    <Stack.Screen name="Search" component={Search}/>
+                    <Stack.Screen name="List" component={List}/>
+                    <Stack.Screen name="Login" component={Login}/>
+                    <Stack.Screen name="Profile" component={Profile}/>
+                    <Stack.Screen name='Item' component={Item} />
+                </Stack.Navigator>
+            </View>
+            <Footer/>
+        </NavigationContainer>
+    );
 };
 export default App;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-    color: 'white',
-  },
-  content: {
-    color: 'white',
-    flex: 10,
-  },
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+        color: 'white',
+    },
+    content: {
+        color: 'white',
+        flex: 10,
+    },
 });

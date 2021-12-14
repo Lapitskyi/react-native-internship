@@ -1,12 +1,17 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View, Dimensions} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, Text, View, Dimensions} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const ListItem = ({item}) => {
-  const {title, img} = item;
+  const {title, img, id} = item;
+  const navigation = useNavigation();
+    console.log(item);
   return (
     <View style={styles.wrapper}>
-      <Image source={img} />
-      <Text>{title}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate(`Item/:${id}`)}>
+            <Image source={img} />
+            <Text>{title}</Text>
+        </TouchableOpacity>
     </View>
   );
 };
