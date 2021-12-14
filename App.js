@@ -10,10 +10,9 @@ import Login from './src/screens/Login';
 import Profile from './src/screens/Profile';
 import {Search} from './src/screens/Search';
 import List from './src/components/List/List';
-import Item from './src/components/List/Item';
+
 
 const Stack = createNativeStackNavigator();
-
 const App = () => {
     useEffect(() => {
         const init = async () => {
@@ -37,9 +36,10 @@ const App = () => {
                     <Stack.Screen name="List" component={List}/>
                     <Stack.Screen name="Login" component={Login}/>
                     <Stack.Screen name="Profile" component={Profile}/>
-                    <Stack.Screen name='Item' component={Item} />
+
                 </Stack.Navigator>
             </View>
+
             <Footer/>
         </NavigationContainer>
     );

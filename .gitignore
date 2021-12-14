@@ -23,9 +23,9 @@ DerivedData
 
 # Android/IntelliJ
 #
-
+package-lock.json
 .eslintcache
-
+.package-lock.json
 .idea
 .gradle
 local.properties

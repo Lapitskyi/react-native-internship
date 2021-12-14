@@ -3,12 +3,11 @@ import {Image, StyleSheet, TouchableOpacity, Text, View, Dimensions} from 'react
 import {useNavigation} from '@react-navigation/native';
 
 const ListItem = ({item}) => {
-  const {title, img, id} = item;
+  const {title, img} = item;
   const navigation = useNavigation();
-    console.log(item);
   return (
     <View style={styles.wrapper}>
-        <TouchableOpacity onPress={() => navigation.navigate(`Item/:${id}`)}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={img} />
             <Text>{title}</Text>
         </TouchableOpacity>
@@ -17,6 +16,7 @@ const ListItem = ({item}) => {
 };
 
 export default ListItem;
+
 const width = Dimensions.get('window').width - 40;
 const styles = StyleSheet.create({
   container: {},
