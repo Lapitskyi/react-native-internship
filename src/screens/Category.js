@@ -1,11 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 
 const Category = () => {
-  return <View />;
+  return  <View><Text>Category</Text></View>;
 };
 
 export default Category;
-const styles = StyleSheet.create({
-  container: {},
-});
+
