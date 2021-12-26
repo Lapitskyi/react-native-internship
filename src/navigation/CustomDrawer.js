@@ -9,7 +9,6 @@ const CustomDrawer = () => {
     return (
         <View style={styles.content}>
             <Drawer.Navigator
-                initialRouteName="Home"
                 screenOptions={{header: () => <Header/>}
                 }
             >

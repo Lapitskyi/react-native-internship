@@ -17,6 +17,7 @@ const CustomTab = () => {
     return (
         <Tab.Navigator
             screenOptions={{
+                headerShown: false,
                 tabBarShowLabel: false,
                 tabBarStyle: {
                     position: 'absolute',
@@ -33,7 +34,7 @@ const CustomTab = () => {
         >
 
             <Tab.Screen
-                name="Home"
+                name="Hom"
                 component={Home}
                 options={{
                     tabBarIcon: ({focused}) => (

@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import List from '../components/List/List';
 
 const Category = () => {
-  return  <View><Text>Category</Text></View>;
+
+  return <List/>
 };
 
 export default Category;

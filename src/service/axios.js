@@ -6,7 +6,7 @@ const headers = {
 };
 
 const api = axios.create({
-  baseURL: process.env.API_HOST + '/',
+  baseURL: process.env.REACT_API_RICK_AND_MORTY + '/',
   method: 'get',
   headers: headers,
 });

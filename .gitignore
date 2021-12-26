@@ -23,6 +23,7 @@ DerivedData
 
 # Android/IntelliJ
 #
+.env
 package-lock.json
 .eslintcache
 .package-lock.json
