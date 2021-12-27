@@ -32,7 +32,6 @@ const CustomTab = () => {
                 },
             }}
         >
-
             <Tab.Screen
                 name="Hom"
                 component={Home}
@@ -76,7 +75,6 @@ const CustomTab = () => {
                 name="Search"
                 component={Search}
                  options={{
-
                     tabBarIcon: ({focused}) => (
                         <View>
                             <Image

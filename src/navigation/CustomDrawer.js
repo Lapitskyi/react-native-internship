@@ -3,14 +3,15 @@ import {StyleSheet, View} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomTab from './CustomTab';
 import Header from '../components/Header';
+import SideBar from '../components/SideBar';
 
 const Drawer = createDrawerNavigator();
 const CustomDrawer = () => {
     return (
         <View style={styles.content}>
             <Drawer.Navigator
-                screenOptions={{header: () => <Header/>}
-                }
+                screenOptions={{header: () => <Header/>}}
+                drawerContent={props => <SideBar {...props}/>}
             >
                 <Drawer.Screen name="Home" component={CustomTab}/>
 
