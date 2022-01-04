@@ -26,8 +26,7 @@ export const API = {
     },
     getRickAndMortyEpisode(){
         return instance('episode').then(response =>{
-            console.log('axios',response);
-            return response.data
+              return response.data
         })
     }
 }
